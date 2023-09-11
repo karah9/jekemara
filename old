@@ -1,0 +1,20 @@
+<table>
+                <thead>
+                <tr>
+                    <th>Espece</th>
+                    @foreach($this->aliments as $aliment)
+                        <th>{{ $aliment }}</th>
+                    @endforeach
+                </tr>
+                </thead>
+                <tbody>
+                @foreach($this->alimentation as $espece => $aliments)
+                    <tr>
+                        <td>{{ $espece }}</td>
+                        @foreach($aliments as $aliment => $quantite)
+                            <td>{{ $quantite }}</td>
+                        @endforeach
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
